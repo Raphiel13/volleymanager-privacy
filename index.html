@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polityka prywatności — VolleyManager</title>
+<meta name="description" content="Polityka prywatności aplikacji mobilnej VolleyManager. Informacje o przetwarzaniu danych osobowych zgodnie z RODO.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-faint: #8a8a8a;
+    --rule: #e8e4dc;
+    --paper: #fbfaf6;
+    --accent: #1e4d3a;
+    --max-width: 720px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+  }
+
+  header {
+    margin-bottom: 64px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(36px, 6vw, 52px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+
+  .meta {
+    font-size: 14px;
+    color: var(--ink-faint);
+    font-feature-settings: "tnum";
+  }
+
+  .toc {
+    background: rgba(30, 77, 58, 0.04);
+    border-left: 3px solid var(--accent);
+    padding: 24px 28px;
+    margin: 48px 0 64px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .toc-title {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  .toc ol {
+    list-style: none;
+    counter-reset: section;
+    columns: 2;
+    column-gap: 32px;
+  }
+
+  .toc li {
+    counter-increment: section;
+    padding: 4px 0;
+    font-size: 14px;
+    break-inside: avoid;
+  }
+
+  .toc li::before {
+    content: counter(section) ". ";
+    color: var(--ink-faint);
+    font-feature-settings: "tnum";
+  }
+
+  .toc a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px dotted transparent;
+    transition: border-color 0.15s;
+  }
+
+  .toc a:hover {
+    border-bottom-color: var(--accent);
+  }
+
+  section {
+    margin-bottom: 56px;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 20px;
+    padding-top: 16px;
+  }
+
+  h2::before {
+    content: counter(h2-counter);
+    counter-increment: h2-counter;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    font-feature-settings: "tnum";
+    margin-right: 12px;
+    vertical-align: 4px;
+    letter-spacing: 0;
+  }
+
+  body { counter-reset: h2-counter; }
+
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin-bottom: 18px;
+    color: var(--ink-soft);
+  }
+
+  ul {
+    margin-bottom: 20px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    color: var(--ink-soft);
+  }
+
+  ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: opacity 0.15s;
+  }
+
+  a:hover {
+    opacity: 0.7;
+  }
+
+  .callout {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 24px 28px;
+    margin: 24px 0;
+  }
+
+  .callout-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  .callout p:last-child {
+    margin-bottom: 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  th {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-faint);
+    border-bottom: 2px solid var(--ink);
+  }
+
+  td:first-child {
+    font-weight: 500;
+    color: var(--ink);
+    width: 38%;
+  }
+
+  footer {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid var(--rule);
+    font-size: 14px;
+    color: var(--ink-faint);
+    text-align: center;
+  }
+
+  footer p { margin-bottom: 4px; color: var(--ink-faint); }
+
+  @media (max-width: 600px) {
+    .container { padding: 48px 20px 80px; }
+    .toc ol { columns: 1; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 22px; }
+    table { font-size: 13px; }
+    th, td { padding: 10px 8px; }
+  }
+
+  @media print {
+    body { background: white; }
+    .container { padding: 0; max-width: 100%; }
+    .toc { break-inside: avoid; }
+    section { break-inside: avoid-page; }
+    a { color: var(--ink); border-bottom: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="eyebrow">VolleyManager</div>
+  <h1>Polityka prywatności</h1>
+  <p class="meta">Obowiązuje od: 7 maja 2026 · Wersja 1.0</p>
+</header>
+
+<div class="toc">
+  <div class="toc-title">Spis treści</div>
+  <ol>
+    <li><a href="#admin">Administrator danych</a></li>
+    <li><a href="#zakres">Zakres przetwarzanych danych</a></li>
+    <li><a href="#cele">Cele i podstawa prawna</a></li>
+    <li><a href="#odbiorcy">Odbiorcy danych</a></li>
+    <li><a href="#przechowywanie">Przechowywanie i zabezpieczenia</a></li>
+    <li><a href="#okres">Okres przechowywania</a></li>
+    <li><a href="#prawa">Prawa użytkownika</a></li>
+    <li><a href="#dzieci">Dane dzieci</a></li>
+    <li><a href="#zmiany">Zmiany polityki</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ol>
+</div>
+
+<p>Niniejsza polityka prywatności opisuje, w jaki sposób aplikacja mobilna <strong>VolleyManager</strong> zbiera, wykorzystuje i chroni dane osobowe użytkowników. Dokument przygotowano zgodnie z wymaganiami Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych, znanym pod skrótem RODO.</p>
+
+<section id="admin">
+  <h2>Administrator danych</h2>
+  <p>Administratorem danych osobowych przetwarzanych w aplikacji VolleyManager jest osoba odpowiedzialna za jej rozwój i utrzymanie. Kontakt z administratorem możliwy jest poprzez adres podany w sekcji <a href="#kontakt">Kontakt</a>.</p>
+  <div class="callout">
+    <div class="callout-label">Uwaga</div>
+    <p>Jeżeli administrator zostanie w przyszłości formalnie zarejestrowany jako podmiot gospodarczy, pełne dane rejestrowe zostaną dodane w tej sekcji. Do tego czasu dane administratora dostępne są na żądanie użytkownika kierowane na adres kontaktowy.</p>
+  </div>
+</section>
+
+<section id="zakres">
+  <h2>Zakres przetwarzanych danych</h2>
+  <p>Aplikacja przetwarza wyłącznie dane niezbędne do realizacji oferowanych funkcji. Zakres przetwarzanych danych przedstawiono w poniższej tabeli.</p>
+
+  <table>
+    <thead>
+      <tr><th>Kategoria danych</th><th>Szczegóły</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dane konta</td>
+        <td>Adres e-mail oraz hasło użytkownika (przechowywane wyłącznie w postaci skrótu kryptograficznego przez usługę Firebase Authentication).</td>
+      </tr>
+      <tr>
+        <td>Dane profilowe</td>
+        <td>Imię lub pseudonim, opcjonalny krótki opis (bio), poziom zaawansowania w siatkówce, preferowane pozycje boiskowe, ustawienia motywu interfejsu.</td>
+      </tr>
+      <tr>
+        <td>Identyfikator użytkownika</td>
+        <td>Unikalny identyfikator (UID) generowany automatycznie przez usługę Firebase Authentication, wykorzystywany jako klucz powiązania danych z kontem.</td>
+      </tr>
+      <tr>
+        <td>Dane lokalizacyjne</td>
+        <td>Przybliżona pozycja geograficzna urządzenia użytkownika wykorzystywana do filtrowania widocznych meczów po promieniu od użytkownika. <strong>Dane lokalizacyjne nie są przesyłane na serwery aplikacji ani w niej zapisywane</strong> — przetwarzanie odbywa się wyłącznie po stronie urządzenia.</td>
+      </tr>
+      <tr>
+        <td>Aktywność w aplikacji</td>
+        <td>Historia rozegranych meczów wprowadzona przez użytkownika, oceny wystawione organizatorom, treści wiadomości w czatach grup, lista grup użytkownika oraz potwierdzenia obecności na zaplanowanych terminach.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Aplikacja <strong>nie zbiera</strong> żadnych dodatkowych danych identyfikujących użytkownika ani urządzenie, takich jak numer telefonu, adres pocztowy, dane kart płatniczych, identyfikatory reklamowe czy szczegółowe informacje o urządzeniu.</p>
+</section>
+
+<section id="cele">
+  <h2>Cele i podstawa prawna przetwarzania</h2>
+  <p>Dane osobowe przetwarzane są w następujących celach:</p>
+
+  <ul>
+    <li><strong>Świadczenie funkcji aplikacji</strong> — umożliwienie rejestracji konta, logowania, edycji profilu, dołączania do meczów, tworzenia grup oraz komunikacji w czacie. Podstawa prawna: niezbędność do wykonania umowy świadczenia usługi (art. 6 ust. 1 lit. b RODO).</li>
+
+    <li><strong>Filtrowanie meczów po lokalizacji</strong> — wykorzystanie współrzędnych geograficznych urządzenia do prezentacji meczów w wybranym promieniu. Podstawa prawna: zgoda użytkownika udzielana przy pierwszym żądaniu dostępu do lokalizacji (art. 6 ust. 1 lit. a RODO). Użytkownik może odmówić zgody — aplikacja będzie wówczas korzystać z domyślnej lokalizacji wybranej w aplikacji.</li>
+
+    <li><strong>Zapewnienie bezpieczeństwa</strong> — wykrywanie nadużyć, ochrona przed nieautoryzowanym dostępem do konta. Podstawa prawna: prawnie uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO).</li>
+  </ul>
+
+  <p>Aplikacja <strong>nie wykorzystuje danych do celów marketingowych, profilowania ani sprzedaży osobom trzecim</strong>.</p>
+</section>
+
+<section id="odbiorcy">
+  <h2>Odbiorcy danych</h2>
+  <p>Dane użytkowników przekazywane są wyłącznie podmiotom będącym dostawcami infrastruktury technicznej, niezbędnej do działania aplikacji. Należą do nich:</p>
+
+  <ul>
+    <li><strong>Google LLC (Firebase)</strong> — dostawca usług uwierzytelniania (Firebase Authentication), bazy danych w chmurze (Cloud Firestore) oraz infrastruktury synchronizacji danych w czasie rzeczywistym. Dane przechowywane są w wielokontynentalnym regionie europejskim (eur3) zgodnie z wymaganiami RODO dotyczącymi miejsca przechowywania danych obywateli Unii Europejskiej. Szczegóły dotyczące przetwarzania danych przez Google dostępne są w <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">polityce prywatności Firebase</a>.</li>
+
+    <li><strong>Google LLC (Google Maps Platform)</strong> — dostawca usługi mapy wykorzystywanej do prezentacji lokalizacji meczów. Zapytania do usługi mapy wysyłane są w trybie anonimowym i nie zawierają danych identyfikujących użytkownika.</li>
+  </ul>
+
+  <p>Wymienione podmioty mogą przetwarzać dane wyłącznie w zakresie niezbędnym do świadczenia usług infrastrukturalnych, na podstawie zawartych umów powierzenia przetwarzania danych zgodnych z RODO. Dane <strong>nie są udostępniane innym odbiorcom</strong>, w szczególności reklamodawcom ani podmiotom marketingowym.</p>
+</section>
+
+<section id="przechowywanie">
+  <h2>Przechowywanie i zabezpieczenia</h2>
+
+  <h3>Lokalizacja danych</h3>
+  <p>Dane przechowywane są w infrastrukturze chmury obliczeniowej Google Cloud Platform, w wielokontynentalnym regionie europejskim (eur3) obejmującym centra danych zlokalizowane w Europie. Wybór tego regionu zapewnia zgodność z wymaganiami RODO dotyczącymi miejsca przechowywania danych obywateli Unii Europejskiej.</p>
+
+  <h3>Zabezpieczenia techniczne</h3>
+  <p>Aplikacja stosuje następujące zabezpieczenia danych użytkowników:</p>
+  <ul>
+    <li>Szyfrowana komunikacja między aplikacją a serwerami z wykorzystaniem protokołu HTTPS oraz TLS.</li>
+    <li>Uwierzytelnianie użytkowników w oparciu o tokeny JSON Web Token generowane przez Firebase Authentication.</li>
+    <li>Hasła użytkowników przechowywane wyłącznie w postaci zaszyfrowanej, nigdy nie są dostępne w postaci jawnej.</li>
+    <li>Reguły bezpieczeństwa Cloud Firestore weryfikujące każdą operację odczytu i zapisu, dostosowane do zasady minimalnych uprawnień.</li>
+    <li>Weryfikacja adresu e-mail podczas rejestracji konta uniemożliwiająca tworzenie kont na cudze adresy.</li>
+    <li>Niezmienność wystawionych ocen organizatorów chroniąca system rankingowy przed manipulacją.</li>
+  </ul>
+
+  <h3>Kopie zapasowe</h3>
+  <p>Dane są automatycznie replikowane między centrami danych Google Cloud w obrębie regionu europejskiego, zapewniając wysoką dostępność i odporność na awarie pojedynczych centrów. Mechanizm okresowych kopii zapasowych jest przewidziany do wdrożenia w kolejnej iteracji aplikacji.</p>
+</section>
+
+<section id="okres">
+  <h2>Okres przechowywania danych</h2>
+  <p>Dane osobowe przechowywane są przez okres niezbędny do realizacji celów ich przetwarzania, zgodnie z poniższymi zasadami:</p>
+
+  <ul>
+    <li><strong>Dane konta i profilu</strong> — przechowywane przez okres istnienia konta użytkownika. Usunięcie konta powoduje trwałe usunięcie wszystkich powiązanych z nim danych.</li>
+    <li><strong>Historia rozegranych meczów</strong> — przechowywana do momentu usunięcia przez użytkownika lub usunięcia konta.</li>
+    <li><strong>Wiadomości w czatach grup</strong> — przechowywane do momentu usunięcia wiadomości przez jej autora lub usunięcia całej grupy przez administratora.</li>
+    <li><strong>Oceny wystawione organizatorom</strong> — przechowywane bezterminowo jako część systemu rankingowego. Oceny nie są trwale powiązane z usuniętym kontem oceniającego.</li>
+  </ul>
+</section>
+
+<section id="prawa">
+  <h2>Prawa użytkownika</h2>
+  <p>Zgodnie z Rozporządzeniem RODO, każdemu użytkownikowi przysługują następujące prawa wobec przetwarzanych danych:</p>
+
+  <ul>
+    <li><strong>Prawo dostępu do danych</strong> (art. 15 RODO) — możliwość uzyskania kopii wszystkich danych osobowych przechowywanych w aplikacji.</li>
+    <li><strong>Prawo sprostowania</strong> (art. 16 RODO) — możliwość poprawienia nieprawidłowych lub uzupełnienia niekompletnych danych. Większość danych profilowych można poprawić bezpośrednio w aplikacji.</li>
+    <li><strong>Prawo do usunięcia danych</strong> (art. 17 RODO) — możliwość żądania usunięcia konta wraz z wszystkimi danymi.</li>
+    <li><strong>Prawo do ograniczenia przetwarzania</strong> (art. 18 RODO) — możliwość żądania czasowego zawieszenia przetwarzania danych.</li>
+    <li><strong>Prawo do przenoszenia danych</strong> (art. 20 RODO) — możliwość otrzymania danych w ustrukturyzowanym formacie umożliwiającym ich przeniesienie do innego administratora.</li>
+    <li><strong>Prawo wniesienia sprzeciwu</strong> (art. 21 RODO) — wobec przetwarzania danych opartego na prawnie uzasadnionym interesie administratora.</li>
+    <li><strong>Prawo wniesienia skargi</strong> do organu nadzorczego — w Polsce jest nim Prezes Urzędu Ochrony Danych Osobowych (<a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>).</li>
+  </ul>
+
+  <p>Realizacja powyższych praw w obecnej wersji aplikacji odbywa się w trybie obsługi manualnej. Żądania należy kierować na adres kontaktowy podany w sekcji <a href="#kontakt">Kontakt</a>. Odpowiedź zostanie udzielona w terminie do 30 dni od otrzymania żądania.</p>
+
+  <p>Samoobsługowy interfejs eksportu i usuwania danych planowany jest jako rozszerzenie w kolejnej iteracji aplikacji.</p>
+</section>
+
+<section id="dzieci">
+  <h2>Dane dzieci</h2>
+  <p>Aplikacja VolleyManager przeznaczona jest dla osób, które ukończyły 18 lat. Aplikacja nie jest skierowana do dzieci i nie zbiera świadomie danych osobowych osób poniżej 18 roku życia. W przypadku stwierdzenia, że konto zostało utworzone przez osobę niepełnoletnią, administrator usunie takie konto wraz z wszystkimi powiązanymi danymi.</p>
+</section>
+
+<section id="zmiany">
+  <h2>Zmiany polityki</h2>
+  <p>Niniejsza polityka prywatności może być okresowo aktualizowana w celu odzwierciedlenia zmian w sposobie przetwarzania danych lub wymaganiach prawnych. Każda istotna zmiana zostanie zakomunikowana użytkownikom poprzez powiadomienie wewnątrz aplikacji lub wiadomość przesłaną na adres e-mail powiązany z kontem. Dalsze korzystanie z aplikacji po wprowadzeniu zmian oznacza akceptację zaktualizowanej polityki.</p>
+  <p>Data ostatniej aktualizacji widoczna jest w nagłówku niniejszego dokumentu.</p>
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p>W sprawach związanych z przetwarzaniem danych osobowych, realizacją praw użytkownika lub innymi pytaniami dotyczącymi niniejszej polityki prywatności prosimy o kontakt drogą elektroniczną:</p>
+  <div class="callout">
+    <div class="callout-label">Adres kontaktowy</div>
+    <p><a href="mailto:r.czaja13gmail.pl">r.czaja13gmail.pl</a></p>
+    <p style="font-size: 13px; color: var(--ink-faint); margin-top: 12px;">Odpowiadamy w terminie do 30 dni od otrzymania zapytania, zgodnie z wymaganiami RODO.</p>
+  </div>
+</section>
+
+<footer>
+  <p>VolleyManager · Aplikacja mobilna do organizacji amatorskich rozgrywek siatkówki</p>
+  <p>© 2026 · Polityka prywatności w wersji 1.0</p>
+</footer>
+
+</div>
+</body>
+</html>
